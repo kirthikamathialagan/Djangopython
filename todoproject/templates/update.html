@@ -1,0 +1,18 @@
+{% extends 'base.html'%}
+{% block body %}
+<div class="card">
+    <div class ='card-header'>
+        <div class="card-title">
+            task completed
+            <div class="card-body">
+              <form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" value="confirm">
+</form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
